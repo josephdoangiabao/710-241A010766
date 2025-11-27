@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: Game đoán số - 241A010766</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Bài 3: Game đoán số</h2>
+    <div class="guess-container">
+        <input type="number" id="guess-input" min="1" max="100" placeholder="Đoán số từ 1-100">
+        <button onclick="checkGuess()">Đoán</button>
+        <div id="guess-msg"></div>
+        <div id="guess-count"></div>
+        <div id="confetti"></div>
+        <button onclick="resetGuessGame()">Chơi lại</button>
+    </div>
+    <script src="js/script.js"></script>
+    <div class="explain">
+        <h4>Giải thích logic:</h4>
+        <ul>
+            <li>Tạo số ngẫu nhiên dùng <code>Math.floor(Math.random()*100)+1</code> giúp đảm bảo chỉ số nằm trong 1-100.</li>
+            <li>Mỗi lần người dùng đoán, kiểm tra số nhập tránh lỗi (kiểu dữ liệu, khoảng giá trị).</li>
+            <li>Cập nhật số lần đoán, nếu đúng hiện confetti.</li>
+            <li>Animation confetti dùng CSS, hiện lên khi đoán đúng.</li>
+        </ul>
+    </div>
+</body>
+</html>
