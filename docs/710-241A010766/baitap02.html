@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: Todo List - 241A010766</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Bài 2: Todo List</h2>
+    <div class="todo-container">
+        <input type="text" id="todo-input" placeholder="Nhập công việc..." />
+        <button onclick="addTodo()">Thêm</button>
+        <div id="todo-list"></div>
+    </div>
+    <script src="js/script.js"></script>
+    <div class="explain">
+        <h4>Giải thích logic:</h4>
+        <ul>
+            <li>Mảng <code>todos</code> quản lý state các công việc. Khi thêm/xóa/sửa sẽ cập nhật lại mảng và lưu vào LocalStorage.</li>
+            <li>Mỗi lần cập nhật, render lại danh sách bằng cách xóa nội dung cũ và tạo lại các phần tử mới từ mảng.</li>
+            <li>Khi click xóa/sửa gọi hàm xử lý tương ứng, kiểm tra chỉ số để tránh lỗi.</li>
+            <li>Grid CSS giúp danh sách hiển thị đẹp và responsive.</li>
+        </ul>
+    </div>
+</body>
+</html>

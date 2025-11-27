@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1: Carousel - 241A010766</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Bài 1: Carousel hình ảnh</h2>
+    <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+        <div class="carousel-slides">
+            <img src="images/slide1.jpg" alt="Ảnh 1">
+            <img src="images/slide2.jpg" alt="Ảnh 2">
+            <img src="images/slide3.jpg" alt="Ảnh 3">
+            <img src="images/slide4.jpg" alt="Ảnh 4">
+            <img src="images/slide5.jpg" alt="Ảnh 5">
+            <img src="images/slide6.jpg" alt="Ảnh 6">
+        </div>
+        <button class="carousel-btn next">&#10095;</button>
+    </div>
+    <script src="js/script.js"></script>
+    <div class="explain">
+        <h4>Giải thích logic:</h4>
+        <ul>
+            <li>Chỉ số ảnh (index) luôn ở trong đoạn [0, (số ảnh - 1)], mỗi lần chuyển kiểm tra nếu vượt quá (out-of-bound) thì quay lại đầu/cuối.</li>
+            <li>Chuyển ảnh dùng <code>setInterval</code> 3s, khi nhấn nút sẽ chuyển index và gọi hàm hiển thị lại ảnh.</li>
+            <li>Hiệu ứng chuyển dùng CSS <code>transition</code> tạo cảm giác mượt.</li>
+            <li>Chỉ render ảnh cần hiển thị, tối ưu bằng cách chuyển slide qua transform thay vì ẩn/hiện từng ảnh.</li>
+        </ul>
+    </div>
+</body>
+</html>
